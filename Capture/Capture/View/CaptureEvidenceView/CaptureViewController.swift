@@ -23,7 +23,7 @@ class CaptureViewController: UIViewController {
         
     }()
     
-    lazy var bntCaptureImage: UIButton = {
+    lazy var bntCaptureVideo: UIButton = {
         let bntCaptureImage = UIButton(frame: .zero)
         bntCaptureImage.translatesAutoresizingMaskIntoConstraints = false
         bntCaptureImage.setTitle("Video", for: .normal)
@@ -65,6 +65,36 @@ class CaptureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        self.setUpUI()
+    }
+    
+    func setUpUI(){
+        let vStackView = UIStackView(frame: .zero)
+        vStackView.translatesAutoresizingMaskIntoConstraints = false
+        vStackView.spacing = 8
+        vStackView.axis = .vertical
+        vStackView.distribution = .fill
+        
+        let BufferTop = UIView.createBufferView()
+        let BufferBottom = UIView.createBufferView()
+        
+        vStackView.addArrangedSubview(BufferTop)
+        vStackView.addArrangedSubview(self.btnCaptureImage)
+        vStackView.addArrangedSubview(self.bntCaptureVideo)
+        vStackView.addArrangedSubview(self.btnCaptureAudio)
+        vStackView.addArrangedSubview(self.btnCaptureImport)
+        vStackView.addArrangedSubview(BufferBottom)
+        
+        BufferTop.heightAnchor.constraint(equalTo: BufferBottom.heightAnchor).isActive = true
+    
+        self.btnCaptureImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        self.bntCaptureVideo.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        self.btnCaptureAudio.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        self.btnCaptureImport.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        self.view.addSubview(vStackView)
+        
+        vStackView.bindToSuperView(top: 8, left: 8, bottom: 8, right: 8)
+      
     }
 
     @objc
@@ -79,7 +109,8 @@ class CaptureViewController: UIViewController {
     
     @objc
     func showCaptureAudio(){
-        
+        let viewCaptureAudio = AudioBox()
+        self.navigationController?.pushViewController(viewCaptureAudio, animated: true)
     }
     
     @objc

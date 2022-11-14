@@ -9,9 +9,12 @@ import UIKit
 
 class CapturePhotoViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    
     
 }

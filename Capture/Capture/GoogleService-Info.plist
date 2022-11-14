@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>422007099856-ajdghrpod92p2qh7pt5p5bru8t2clj8t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.422007099856-ajdghrpod92p2qh7pt5p5bru8t2clj8t</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDfsyYxHi9NwhluYiDdJHmVG6BndLDDxXA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>422007099856</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Denisse.Capture</string>
+	<key>PROJECT_ID</key>
+	<string>captureapp-f9725</string>
+	<key>STORAGE_BUCKET</key>
+	<string>captureapp-f9725.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:422007099856:ios:46a96806305ae00401a9d5</string>
+</dict>
+</plist>
