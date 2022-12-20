@@ -50,7 +50,7 @@ class ZoomTabBarController: UIViewController {
         zoomTabBarView.center = parentView.center
         zoomTabBarWithUltra = zoomTabBarView.widthAnchor.constraint(equalToConstant: 112)
         zoomTabBarWithoutUltra = zoomTabBarView.widthAnchor.constraint(equalToConstant: 80)
-        zoomTabBarWithoutUltraAndTelephoto = zoomTabBarView.widthAnchor.constraint(equalToConstant: 45)
+        zoomTabBarWithoutUltraAndTelephoto = zoomTabBarView.widthAnchor.constraint(equalToConstant: 48)
         
         let previewHeight = (view.bounds.width + view.safeAreaInsets.left + view.safeAreaInsets.right) * (4/3)
         let remainingHeight = view.bounds.height - previewHeight
@@ -98,7 +98,7 @@ class ZoomTabBarController: UIViewController {
         zoomTelephotoButtonConstraint = zoomTelephotoButton.leadingAnchor.constraint(equalTo: zoomWideButton.leadingAnchor, constant: 8)
         zoomTelephotoButton.trailingAnchor.constraint(equalTo: zoomTabBarView.trailingAnchor, constant: -8).isActive = true
         
-        //setConstraintZoom()
+        setConstraintsZoom()
         NSLayoutConstraint.activate(zoomWideSelected)
         zoomTelephotoButtonConstraint.isActive = true
         zoomUltraButtonConstraint.isActive = true
